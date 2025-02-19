@@ -4,7 +4,12 @@ import { Link, useParams } from 'react-router-dom'
 import Skelton from '../Skelton/Skelton';
 
 
-
+type MealType = {
+    idMeal: string;
+    strMeal: string;
+    strMealThumb: string;
+    strArea?: string;
+};
 export default function Meals() {
     const { c } = useParams()
     console.log(c);
@@ -22,7 +27,7 @@ export default function Meals() {
     return (
         <div className=' container mx-auto py-5'>
             <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-10'>
-                {data?.data.meals.map(meal => <div key={meal.idMeal} className='shadow-lg group rounded-2xl py-3 hover:scale-[1.1] transition-all   '>
+                {data?.data.meals.map((meal:MealType) => <div key={meal.idMeal} className='shadow-lg group rounded-2xl py-3 hover:scale-[1.1] transition-all   '>
                     <img src={meal.strMealThumb} className='w-1/2 -translate-y-6 group-hover:rotate-[360deg]
                     transition-all duration-500 rounded-full mx-auto' alt="" />
                     <p className='text-xl text-center text-gray-900'>{ meal.strMeal }</p>
