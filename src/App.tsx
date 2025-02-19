@@ -1,5 +1,4 @@
-import React from 'react'
-import Footer from './Components/Footer/Footer'
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import Layout from './Components/Layout/Layout'
