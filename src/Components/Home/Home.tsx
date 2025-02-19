@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import img from '../../assets/logo-BfNap0Pe.png';
-import Meals from '../Meals/Meals';
+import Meals from '../Meals/Meals.jsx';
 
 export default function Home() {
   return (
