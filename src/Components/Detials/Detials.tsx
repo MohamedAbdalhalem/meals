@@ -13,7 +13,6 @@ export default function Detials() {
         queryFn: getdetails,
         queryKey:['getdetails',id]
     })
-  console.log(data?.data.meals[0])
   if (isLoading) {
     return <Skeleton/>
   }
